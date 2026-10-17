@@ -37,8 +37,8 @@ def init_db():
 
 @app.route("/health")
 def health():
-    return {"status": "ok", "served_by": socket.gethostname()}
-
+#    return {"status": "ok", "served_by": socket.gethostname()}
+    return {"status": "ok BOSS", "version": "1.1", "served_by": socket.gethostname()}
 
 @app.route("/notes", methods=["GET", "POST"])
 def notes():
